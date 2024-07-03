@@ -932,7 +932,15 @@
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-
+    <script> 
+        if (typeof window._phv2Activator === "undefined") {
+        document.addEventListener('phv2site.ready', (e) => {
+        window._phv2Activator.activate('native_web_push');
+        });
+        } else {
+        window._phv2Activator.activate('native_web_push');
+        }
+        </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
